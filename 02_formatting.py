@@ -87,3 +87,6 @@ rounded_quotient = round(quotient ,1)
 result = f"Result: {rounded_quotient}"
 print(result)
 
+
+#It didnt say it needed to be rounded using {0:.1f}
+
