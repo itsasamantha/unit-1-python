@@ -20,25 +20,24 @@ choice = int(input("Enter choice: "))
 # going through the choices
 # only did it like this so i can add the else statement
 if choice == 1:
-    result = num1 + num2
+    result = float(num1 + num2)
 elif choice == 2:
-    result = num1 - num2
+    result = float(num1 - num2)
 elif choice == 3:
-    result = num1 * num2
+    result = float(num1 * num2)
 elif choice == 4:
-    result = num1 / num2
+    result = float(num1 / num2)
 elif choice == 5:
     #math.floor(num1 / num2)
-    result = num1 // num2
+    result = float(num1 // num2)
 elif choice == 6:
     #pow(num1,num2)
-    result = num1 ** num2
+    result = float(num1 ** num2)
 elif choice == 7:
     #math.remainder(num1 / num2) 
-    result = num1 % num2
+    result = float(num1 % num2)
 else:
     result = "You need to choose one of those options"
 
 print(result)
 
-    
