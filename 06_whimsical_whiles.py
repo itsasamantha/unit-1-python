@@ -1,20 +1,20 @@
-# """
-# 1. Simple Counter:
-# Write a program that uses a while loop to print numbers from 1 to 10.
-# """
-# i = 0
-# while i < 10:
-#     i +=1
-#     print(i)
+"""
+1. Simple Counter:
+Write a program that uses a while loop to print numbers from 1 to 10.
+"""
+i = 0
+while i < 10:
+    i +=1
+    print(i)
 
-# """
-# 2. Countdown:
-# Write a program that uses a while loop to print numbers from 10 to 1 in descending order.
-# """
-# i=10
-# while i >= 1:
-#     print(i)
-#     i-=1
+"""
+2. Countdown:
+Write a program that uses a while loop to print numbers from 10 to 1 in descending order.
+"""
+i=10
+while i >= 1:
+    print(i)
+    i-=1
 
 """
 3. Factorial Calculation:
@@ -34,14 +34,16 @@ print(factorial)
 4. Password Guessing Game:
 Create a simple password guessing game using a while loop. Ask the user to guess a predefined password and provide appropriate feedback.
 """
-password = ""
+password = "rumpelstiltskin"
 
-user = input("Guess my password(not case sensitive)")
-user = user.lower
-if user == password:
-    print("You've guessed my password")
-else:
-    print("Try again")
+
+while True:
+    user = input("Guess my password(case sensitive))")
+    if user == password:
+        print("You've guessed my password")
+        break
+    else:
+        print("Try again")
 
 
 
