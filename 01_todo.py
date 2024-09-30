@@ -1,6 +1,6 @@
 # creates the list the todos is stored in
-todo_list = []
-
+with open("list_todo.txt") as file:
+    contents = file.readlines()
 
 #infinite while loop
 while True:
@@ -11,27 +11,27 @@ while True:
     # the number showed in the list print out
     num = 1
     #checks to see if there is something in the list
-    if todo_list == []:
+    if contents == []:
         #spacing
         print()
         print()
         print("There is nothing in your list right now")
     else:
         # print out each item on its own line
-        for i in todo_list:
+        for i in contents:
             print(f"{num}) {i}")
             num+=1
     #spacing
     print()
     print()
     # asking the user to add or remove
-    decision = input("Would you like to add, remove, clear all  or edit your to do list? ")
+    decision = input("Would you like to save, add, remove, clear all  or edit your to do list? ")
     if decision == "add":
         #spacing
         print()
         print()
         action = input("What is it that you would like to add to your todo list? ")
-        #makes suure there was an input
+        #makes sure there was an input
         if action.strip() == "":
             print()
             print()
@@ -41,13 +41,13 @@ while True:
             print()
         else:
             # adds the writren item to the list 
-            todo_list.append(action)
+            contents.append(action)
             #spacing
             print()
             print()
     elif decision == "remove":
         #checks to see if there is something in the list
-        if todo_list == []:
+        if contents == []:
             #spacing
             print()
             print()
@@ -58,29 +58,29 @@ while True:
             print()
             # removes based on the item not the number
             action = input("Which todo item needs to be removed? ")
-            todo_list.remove(action)
+            contents.remove(action)
             #spacing
             print()
             print()
             
     elif decision == "clear all":
         #checks to see if there is something in the list
-        if todo_list == []:
+        if contents == []:
             #spacing
             print()
             print()
             print("There is nothing in your list right now")
         else:
             #goes through and removes every item
-            for x in todo_list:
+            for x in contents:
                 print()
                 print()
-                todo_list.remove(x)
+                contents.remove(x)
                 print()
                 print()
     elif decision == "edit":
         #checks to see if there is something in the list
-        if todo_list == []:
+        if contents == []:
             #spacing
             print()
             print()
@@ -94,15 +94,25 @@ while True:
             print()
             print()
             #changes that list item to the new value change
-            todo_list[edit_num-1] = change
+            contents[edit_num-1] = change
+
+    elif decision == "save":
+        #opens the file to write
+        with open("list_todo.txt","w") as file:
+            #then writes the list in the list
+            file.writelines(contents) 
+        break
+        
     else:
         #spacing
         print()
         print()
         print("Sorry I didn't get that could you please us the exact woring of the question.")
-        print("Please type add, remove, clear all or edit")
+        print("Please type save, add, remove, clear all or edit")
         #spacing
         print()
         print()
-        
 
+print("Saved your to do!!!!")
+
+    
