@@ -1,5 +1,5 @@
 # creates the list the todos is stored in
-with open("list_todo.txt") as file:
+with open("Projects/todos.txt") as file:
     contents = file.readlines()
 
 #infinite while loop
@@ -41,7 +41,7 @@ while True:
             print()
         else:
             # adds the writren item to the list 
-            contents.append(action)
+            contents.append(action + "\n")
             #spacing
             print()
             print()
@@ -57,8 +57,8 @@ while True:
             print()
             print()
             # removes based on the item not the number
-            action = input("Which todo item needs to be removed? ")
-            contents.remove(action)
+            re = input("Which todo item needs to be removed? ")
+            contents.remove("hi" + "\n")
             #spacing
             print()
             print()
@@ -94,11 +94,11 @@ while True:
             print()
             print()
             #changes that list item to the new value change
-            contents[edit_num-1] = change
+            contents[edit_num-1] = change + "\n"
 
     elif decision == "save":
         #opens the file to write
-        with open("list_todo.txt","w") as file:
+        with open("Projects/todos.txt","w") as file:
             #then writes the list in the list
             file.writelines(contents) 
         break
