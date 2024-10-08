@@ -58,7 +58,7 @@ while True:
             print()
             # removes based on the item not the number
             re = input("Which todo item needs to be removed? ")
-            contents.remove("hi" + "\n")
+            contents.remove(re + "\n")
             #spacing
             print()
             print()
