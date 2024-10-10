@@ -7,6 +7,9 @@ parameter and prints a greeting message like "Hello, [name]!".
 user_name  = input("What is your name? ")
 
 def greeting (name):
+    """
+    This function takes in a users name and prints hello before it
+    """
     print("Hello, " + name)
 
 greeting(user_name)
@@ -20,6 +23,9 @@ user_int  = int(input("What is your integer? "))
 
 #function that squares the paramenter int
 def square (int):
+    """
+    This function takes in a integer and returns the squared value
+    """
     return int ** 2
 
 #the returned numberis saved to this varible
@@ -36,6 +42,9 @@ user_number = int(input("Write a number "))
 
 # returns the string 'true' or 'false'
 def t_or_f(num):
+    """
+    This function determines if a number id even or odd
+    """
     if num % 2 == 0:
         return "True"
     else:
@@ -50,6 +59,9 @@ Write a function that takes the length and width of a rectangle and returns its 
 """
 #function the uses two paramaters
 def area(length, width):
+    """
+    This function calculates the area of a rectangle
+    """
     return length * width
 
 calculations = area(3,7)
@@ -66,6 +78,9 @@ celsius_temp = 43.6
 
 #preforms the conversion equation and returns it 
 def convert(cel):
+    """
+    This function converts celsius to fahrenheit
+    """
     return (cel*(9/5))+32
 #sets the returned value to fahrenheit_temp
 fahrenheit_temp = convert(celsius_temp)
@@ -80,6 +95,9 @@ and returns the average (mean) of those numbers.
 num_list = [23,3,23,1,14,5,6,7,24,12,23]
 
 def average(list):
+    """
+    This function finds the average of a list of numbers
+    """
     sum = 0
     count = 0
     
@@ -97,3 +115,22 @@ Task 7: Total Calculator
 Create a function that has arguments for the price and quantity of something, and returns the total.
 Your function should also optionally accept a 3rd argument for discount, and return the discounted if provided.
 """
+
+def total(price, quantity, discount = 0.0):
+    """
+    This function calculates the total price of one or more items
+
+    There is an option of adding a discount
+    """
+    #multiplies the price by the number if the same item
+    first_cost = price * quantity
+
+    #This prevents the cost from being multiplied by 0 if there is no discount
+    if discount == 0.0:
+        return first_cost
+    else:
+        final_cost = first_cost * discount
+
+your_price = total(21, 1, 0.8)
+
+
