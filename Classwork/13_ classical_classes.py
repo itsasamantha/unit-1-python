@@ -114,7 +114,7 @@ class BankAccount:
 
     #subrtacts amount from balance 
     def withdrawing(self, amount):
-        self.balance -= amount
+        self.balance -= amount #td
 
 my_acc = BankAccount("Samantha",2000)
 
