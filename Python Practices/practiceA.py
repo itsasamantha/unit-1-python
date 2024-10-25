@@ -27,3 +27,12 @@ while count < 4 :
 
 if count == 4:
     print(f"You have run out of guesses. The number was {answer}")
+
+    """
+This is python practices a,
+"""
+
+grocery_list = []
+
+print("Hi, welcome to your grocery list")
+print("For some reason this grocery list csn only hold up to five items")
